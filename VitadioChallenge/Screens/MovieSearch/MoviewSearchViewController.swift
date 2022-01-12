@@ -104,6 +104,13 @@ private extension MoviewSearchViewController {
     
     func displayMovie(withID imdbId: String) {
         // TODO: CHALENGE - display detail screen for this movie
+
+        let alert = UIAlertController(title: "TODO", message: "Prejit na obrazovku detailu filmu. Tento alert smazat", preferredStyle: .alert)
+        
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        
+        present(alert, animated: true, completion: nil)
+        
         print("display detail screen for movie with imdb ID \(imdbId)")
     }
 }

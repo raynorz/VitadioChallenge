@@ -18,6 +18,7 @@ extension ApiCommunication {
         }
         
         return URLSession.shared.dataTaskPublisher(for: urlRequest)
+            .receive(on: RunLoop.main)
             .mapError { _ in ApiError.failedRequest }
             .flatMap { data in
                 decode(data.data)}
